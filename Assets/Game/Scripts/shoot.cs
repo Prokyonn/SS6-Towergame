@@ -27,7 +27,7 @@ public class shoot : MonoBehaviour {
 	{
 		if (bullet) 
 		{
-			GameObject newBullet = Instantiate (bullet, crosshair.gameObject.transform.position, transform.rotation) as GameObject;
+			GameObject newBullet = Instantiate (bullet, crosshair.gameObject.transform.position, crosshair.gameObject.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce (transform.forward * 20f, ForceMode.VelocityChange);
 		}
 
